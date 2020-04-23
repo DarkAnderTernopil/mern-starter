@@ -6,7 +6,13 @@ import CommentListItem from '../CommentListItem/CommentListItem';
 const CommentList = ({ comments, onEditComment, onDeleteComment }) => {
   return (
     <div>
-      {comments.map(comment => <CommentListItem onDeleteComment={onDeleteComment} comment={comment} onEditComment={onEditComment} key={comment.cuid} />)}
+      {comments.map(comment =>
+        <CommentListItem
+          onDeleteComment={onDeleteComment}
+          comment={comment}
+          onEditComment={onEditComment}
+          key={comment.cuid}
+        />)}
     </div>
   );
 };
